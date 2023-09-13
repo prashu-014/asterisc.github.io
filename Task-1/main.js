@@ -38,7 +38,7 @@ sunIcon.addEventListener("click", () => {
 
 ScrollReveal({
     reset: true,
-    distance: '10px',
+    distance: '5px',
     duration: 2500,
     delay: 400
 });
