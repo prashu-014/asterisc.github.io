@@ -869,7 +869,7 @@ main.row {
    .about-page article:nth-child(2) p {
 
       font-size: 0.8rem; ;
-      padding: 0;
+      padding: 10px;
    }
 
    .hire-page article:nth-child(2) {
