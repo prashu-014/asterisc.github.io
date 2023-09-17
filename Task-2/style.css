@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html,
+body {
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* common color */
+.bg-light-grey {background-color: rgba(0, 0, 0, 0.085);}
+.bg-orange-color { background-color: orange;}
+.grey {background-color: rgba(128, 128, 128, 0.227);}
+.nevi-blue {background-color: rgb(19, 19, 199);}
+.card-color {background-color: rgba(255, 255, 255, 0.701);}
+.bg-dark-blue {background-color: rgb(7, 114, 153);}
+
+
+/* loader starts */
+.spinner-wrapper {
+
+    background-color: rgb(221, 213, 213);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s;
+    z-index: 20;
+
+}
+
+.spinner-border {
+    height: 60px;
+    width: 60px;
+}
+
+/* loader ends */
+
+
+/* live webinar card starts  */
+.card {
+    width: 300px;
+    max-height: 400px;
+    color: white;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+/* live webinar card ends  */
+
+
+
+
+
+nav {
+    z-index: 10;
+    background-color: rgb(7, 114, 153);
+}
+
+
+.outline-none {
+    outline: none;
+    border: none;
+}
+
+.intro-text {
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    letter-spacing: 2px;
+}
+
+
+@media(min-width:576px) {
+    .intro-text {
+
+        font-size: 2.3rem;
+
+
+    }
+
+}
+
+@media(max-width:575px) {
+    .intro-text {
+        position: absolute;
+        top: 20%;
+        left: 0;
+        font-size: 1.3rem;
+        /* background-color: rgba(255, 255, 255, 0.953); */
+        padding: 1rem;
+
+    }
+
+    .card {
+        top: 40%;
+    }
+
+}
+
+@media(max-width:400px) {
+    .intro-text {
+
+        font-size: 1.2rem;
+    
+        font-weight: bolder;
+
+    }
+
+    .none {
+        display: none;
+    }
+
+}
