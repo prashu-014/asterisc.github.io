@@ -38,16 +38,16 @@ sunIcon.addEventListener("click", () => {
 
 ScrollReveal({
     reset: true,
-    distance: '10px',
+    distance: '0px',
     duration: 2500,
     delay: 400
 });
 
-ScrollReveal().reveal('.name, .about-name,.social-icon,.hire-text,.profie,.footer-form', { delay: 500, origin: 'left' });
+ScrollReveal().reveal('.land-photo,.about-name,.social-icon,.hire-text,.profie,.footer-form', { delay: 500, origin: 'left' });
 
 ScrollReveal().reveal('.front-de, .btn, .welcome-text', { delay: 600, origin: 'bottom' });
 
-ScrollReveal().reveal('.land-photo,.about-image,.experi-text,.hire-image,.project-card,.contact-text,.box', { delay: 700, origin: 'right' });
+ScrollReveal().reveal('.name,.about-image,.experi-text,.hire-image,.project-card,.contact-text,.box', { delay: 700, origin: 'right' });
 
 ScrollReveal().reveal('.about-text,.project-title', { delay: 800, origin: 'top' });
 
