@@ -137,6 +137,17 @@ width: 70px;
 {
     display: none;
 }
+.landing-image
+{
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style:none;
+
+}
+.landing-image::-webkit-scrollbar
+{
+    display: none;
+}
 
     
 
