@@ -46,7 +46,7 @@ nav
 .maincontainer
 {
     height: 70vh;
-    overflow-x: scroll;
+    overflow-y: scroll;
     scrollbar-width: none;
     -ms-overflow-style:none;
     
