@@ -46,7 +46,14 @@ nav
 .maincontainer
 {
     height: 70vh;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style:none;
     
+}
+.maincontainer::-webkit-scrollbar
+{
+    display: none;
 }
 .shop-active
     {
