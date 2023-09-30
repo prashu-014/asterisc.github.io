@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="loginPage.html">
+
+
+</head>
+
+<body class="text-white">
+
+    <!-- search box popup -->
+
+    <div class="modal fade bd-example-modal-lg position-absolute" tabindex="-1" role="dialog"
+        aria-labelledby="myLargeModalLabel" aria-hidden="true" id="search-box-popup">
+        <div class="modal-dialog modal-lg">
+
+            <div class="modal-content bg-transparent">
+                <i class="ri-close-fill close  fs-4 text-end text-danger" data-dismiss="modal" aria-label="Close"></i>
+                <div class="d-flex justify-content-center ">
+                    <input type="text" placeholder="Enter search keywords" class="px-1 py-2 w-100">
+                    <button class="bg-dark"><i class="ri-search-line text-white fs-4 px-2 py-1"></i></button>
+                </div>
+
+
+            </div>
+            <br>
+
+        </div>
+    </div>
+
+    <!-- Button trigger modal -->
+
+
+
+
+    <!-- Login page -->
+    <div class="modal fade position-absolute text-black-50" id="loginForm" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Login Page</h5>
+                    <button type="button" class="close px-2 bg-danger text-white" data-dismiss="modal"
+                        aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <form onsubmit="">
+                        <div class="form-group mb-2">
+
+                            <input type="email" class="form-control" id="user-email" aria-describedby="emailHelp"
+                                placeholder="Enter email">
+
+                        </div>
+                        <div class="form-group">
+
+
+                            <input type="password" class="form-control" id="user-password" placeholder="Password">
+                        </div>
+                        <div>
+                            <span class=""><a href="#">Forget password</a></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 mt-2">Login</button>
+                        <span class=" d-block w-100 text-end"><a href="">Create account</a></span>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Login page -->
+
+
+
+
+
+
+
+
+
+
+
+    <div class="shopping position-fixed ">
+
+        <div>
+            <span><i class="ri-close-fill text-end fs-3 bg-danger" id="shop-close"></i></span>
+            <h3 class="fw-bold">Shopping Card</h3>
+            <hr>
+        </div>
+
+        <div class="maincontainer">
+            <!-- <div class="bg-danger d-flex align-items-center justify-content-between overflow-auto my-1"> -->
+            <!-- <img src="img/shoe-1.png" alt="" class="w-25">
+                <div>
+                    <h5 class="item-name">Jordon</h5>
+                    <h5 class="item-price">$100</h5>
+                    <input type="number" class="num" value="1" title="quantity">
+                    <h5 class="item-total">Total</h5>
+
+                </div>
+                <button class="p-1 remove-Btns">Remove</button> -->
+        </div>
+
+        
+
+        <div class="total-price py-3 px-1">
+            <h4>Total Amount: <span class="final-total fs-5 text-danger">00</span></h4>
+            <button class="bg-info border-0 p-1 px-2  rounded-2">Process To Checkout</button>
+        </div>
+
+    </div>
+
+
+    </div>
+
+
+
+    <nav class="container-xxl d-flex justify-content-between align-items-center position-sticky top-0 ">
+        <span class="logo"><img src="img/pngwing.com.png" alt=""></span>
+
+        <div class="d-flex flex-column flex-md-row navbar-nav px-1 " id="navbar-nav">
+            <span class="w-100 text-end "><i class="ri-close-fill d-block fs-1 text-end px-2 d-md-none bg-danger"
+                    id="close"></i></span>
+            <ul class="d-md-flex mt-md-2 mx-md-4">
+
+                <li class="d-md-none"><span class="logo"><img src="img/pngwing.com.png" alt=""></span></li>
+                <li class="p-2"><a href="#" title="menu-item"
+                        class="text-decoration-none text-secondary fs-5 fw-bold">Home</a></li>
+                <li class="p-2"><a href="#about" title="menu-item"
+                        class="text-decoration-none text-secondary fs-5 fw-bold">About</a>
+                </li>
+                <li class="p-2"><a href="#product" title="menu-item"
+                        class="text-decoration-none text-secondary fs-5 fw-bold">Product</a>
+                </li>
+                <li class="p-2"><a href="#testmonial" title="menu-item"
+                        class="text-decoration-none text-secondary fs-5 fw-bold">Testmonial</a></li>
+                <li class="p-2"><a href="#product" title="menu-item"
+                        class="text-decoration-none text-secondary fs-5 fw-bold">Shop</a></li>
+
+
+            </ul>
+            <div class="d-flex align-items-center mx-5 gap-2 mx-md-0">
+                <span class="d-none d-md-block"><i class="ri-search-line fs-4" data-toggle="modal"
+                        data-target=".bd-example-modal-lg"></i></span>
+                <div class="px-2 d-none d-md-block">
+                    <span class="position-relative"><i class="ri-shopping-cart-line fs-4 shop-icon"></i></span>
+                    <span class="position-absolute hide counter1">0</span>
+                </div>
+
+
+
+                <i class="ri-contacts-fill fs-4 login-icon position-relative">
+                    <div class=" bg-dark text-black-50 position-absolute login-popup d-flex flex-column  gap-md-2">
+
+                        <div class="d-flex w-100">
+                            <div class="profie-circle"></div>
+                            <span class="fs-6 px-3 text-white ">Guest</span>
+                        </div>
+
+                        <button class="border-0 px-1 py-1 mt-2 text-white bg-info rounded-2 fs-6 w-100"
+                            data-toggle="modal" data-target="#loginForm">Login</button>
+
+                    </div>
+                </i>
+
+
+            </div>
+        </div>
+
+
+
+        <div class="d-md-none d-flex">
+            <span class="d-md-none"><i class="ri-search-line fs-4 mx-2" data-toggle="modal"
+                    data-target=".bd-example-modal-lg"></i></span>
+
+
+            <div class="px-3 d-md-none">
+                <span class="position-relative"><i class="ri-shopping-cart-line fs-4 shop-icon1"></i></span>
+                <span class="position-absolute hide counter">0</span>
+            </div>
+
+
+            <i class="ri-menu-3-line d-md-none fs-3" id="toggle-btn"></i>
+        </div>
+
+    </nav>
+
+
+
+
+
+
+
+    <div class="container-xxl mh-100 pt-2 pt-md-5 d-flex align-items-center  font-micro">
+        <!--  -->
+        <div class="row row-cols-1 d-flex row-cols-md-2 align-content-center justify-content-between">
+            <div class="col">
+                <h1 class="display-3 fw-bolder">Summer <br>
+                    Collections <br>
+                    <span class="">2023</span>
+                </h1>
+                <p>
+                    Premium Sports Shoes for Women Walking Shoes For Women. <br> Sale Price Live. Free
+                    delivery. Limited Time Deals. Offer ends soon.
+                </p>
+                <div>
+                    <button class="btn rounded-0 text-white fw-bold">Shop Now <i
+                            class="ri-arrow-right-circle-fill"></i></button>
+                    <img src="img/arrow.png" alt="" class="arrow-blue">
+                    <div class="text-center d-none d-md-block">
+                        <span class="text-danger fw-bold">4.9 | <i class="ri-star-fill text-warning"> </i><i
+                                class="ri-star-fill text-warning"> </i><i class="ri-star-fill text-warning"> </i><i
+                                class="ri-star-fill text-warning"> </i><i class="ri-star-fill text-warning"> </i></span>
+                        <br>
+                        120k Total Review
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col d-flex align-items-center position-relative landing-image">
+                <img src="img/shoe-orage.png" alt="" class="img-fluid ">
+                <img src="img/yellow.png" alt="" class="img-fluid ">
+                <img src="img/purple.png" alt="" class="img-fluid">
+                <img src="img/red.png" alt="" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+    <div class="container-xxl  pt-5" id="product">
+        <h1 class="pb-1 pt-4">Popular Products</h1>
+
+        <div class="cards">
+
+            <div class="cards-itms border border-2 border-dark p-1">
+                <div class="card-color position-relative">
+                    <span class=""><i class="ri-heart-line py-1 px-2 rounded-circle position-absolute heart"></i></span>
+                    <img src="img/shoe-blue1.png" alt="" class="w-75">
+
+                </div>
+                <p class="fw-bold">
+                    <span>
+                        <i class="ri-star-fill text-warning"> </i>
+                        <i class="ri-star-fill text-warning"> </i>
+                        <i class="ri-star-fill text-warning"> </i>
+                        <i class="ri-star-fill text-warning"> </i>
+                        (448)
+                    </span>
+                </p>
+                <div class="item-title fw-bold">Nike Air Jordan-100</div>
+                <div class="d-flex gap-4">
+                    <h4 class="fw-bold">$70</h4>
+                    <button class="py-0 px-2 border-0 blue text-white add-cart">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="cards-itms border border-2 border-dark p-1">
+                <div class="card-color position-relative">
+                    <span class=""><i class="ri-heart-line py-1 px-2 rounded-circle position-absolute heart"></i></span>
+                    <img src="img/shoe-white1.png" alt="" class="w-75">
+
+                </div>
+                <p class="fw-bold"><span><i class="ri-star-fill text-warning"> </i> <i
+                            class="ri-star-fill text-warning"> </i><i class="ri-star-fill text-warning"> </i><i
+                            class="ri-star-fill text-warning"> </i><i class="ri-star-fill text-warning"> </i>
+                        (5,452)</span> <br>
+
+                </p>
+                <div class="item-title fw-bold">Jumpman MVP</div>
+                <div class="d-flex gap-4">
+                    <h4 class="fw-bold">$165</h4>
+                    <button class="py-0 px-2 border-0 blue text-white add-cart">Add to cart</button>
+                </div>
+            </div>
+
+
+            <div class="cards-itms border border-2 border-dark p-1">
+                <div class="card-color position-relative">
+                    <span class=""><i class="ri-heart-line py-1 px-2 rounded-circle position-absolute heart"></i></span>
+                    <img src="img/shoe-red1.png" alt="" class="w-75">
+
+                </div>
+                <p class="fw-bold"><span><i class="ri-star-fill text-warning"> </i><i class="ri-star-fill text-warning">
+                        </i><i class="ri-star-fill text-warning"> </i><i class="ri-star-fill text-warning"> </i>
+                        (1,425)</span> <br>
+
+                </p>
+                <div class="item-title fw-bold">Tatum 1 Team BankP</div>
+                <div class="d-flex gap-4">
+                    <h4 class="fw-bold">$120</h4>
+                    <button class="py-0 px-2 border-0 blue text-white add-cart">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="cards-itms border border-2 border-dark p-1">
+                <div class="card-color position-relative">
+                    <span class=""><i class="ri-heart-line py-1 px-2 rounded-circle position-absolute heart"></i></span>
+                    <img src="img/shoe-green1.png" alt="" class="w-75">
+
+                </div>
+                <p class="fw-bold"><span><i class="ri-star-fill text-warning"> </i><i class="ri-star-fill text-warning">
+                        </i><i class="ri-star-fill text-warning"> </i><i class="ri-star-fill text-warning"> </i>
+                        (965)</span> <br>
+
+                </p>
+                <div class="item-title fw-bold"> Tatum 1 "Home Team"</div>
+                <div class="d-flex gap-4">
+                    <h4 class="fw-bold">$67.5</h4>
+                    <button class="py-0 px-2 border-0 blue text-white add-cart">Add to cart</button>
+                </div>
+            </div>
+
+
+            <div class="cards-itms border border-2 border-dark p-1">
+                <div class="card-color position-relative">
+                    <span class=""><i class="ri-heart-line py-1 px-2 rounded-circle position-absolute heart"></i></span>
+                    <img src="img/shoe-1.png" alt="" class="w-75">
+
+                </div>
+                <p class="fw-bold"><span><i class="ri-star-fill text-warning"> </i> <i
+                            class="ri-star-fill text-warning"> </i><i class="ri-star-fill text-warning"> </i>
+                        (326)</span> <br>
+
+                </p>
+                <div class="item-title fw-bold">AJKO 1</div>
+                <div class="d-flex gap-4">
+                    <h4 class="fw-bold">$140</h4>
+
+                    <button class="py-0 px-2 border-0 blue text-white add-cart">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="cards-itms border border-2 border-dark p-1">
+                <div class="card-color position-relative">
+                    <span class=""><i class="ri-heart-line py-1 px-2 rounded-circle position-absolute heart"></i></span>
+                    <img src="img/shoe-2.png" alt="" class="w-75">
+
+                </div>
+                <p class="fw-bold"><span><i class="ri-star-fill text-warning"> </i><i class="ri-star-fill text-warning">
+                        </i><i class="ri-star-fill text-warning"> </i> (236)</span> <br>
+
+                </p>
+                <div class="item-title fw-bold">Nike Force 1 LV8</div>
+                <div class="d-flex gap-4">
+                    <h4 class="fw-bold">$75</h4>
+                    <button class="py-0 px-2 border-0 blue text-white add-cart">Add to cart</button>
+                </div>
+            </div>
+
+
+            <div class="cards-itms border border-2 border-dark p-1">
+                <div class="card-color position-relative">
+                    <span class=""><i class="ri-heart-line py-1 px-2 rounded-circle position-absolute heart"></i></span>
+                    <img src="img/shoe-3.png" alt="" class="w-75">
+
+                </div>
+                <p class="fw-bold"><span><i class="ri-star-fill text-warning"> </i><i class="ri-star-fill text-warning">
+                        </i><i class="ri-star-fill text-warning"> </i> (354)</span> <br>
+
+                </p>
+                <div class="item-title fw-bold">Giannis Immortality 2</div>
+                <div class="d-flex gap-4">
+                    <h4 class="fw-bold">$50</h4>
+                    <button class="py-0 px-2 border-0 blue text-white add-cart">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="cards-itms border border-2 border-dark p-1">
+                <div class="card-color position-relative">
+                    <span class=""><i class="ri-heart-line py-1 px-2 rounded-circle position-absolute heart"></i></span>
+                    <img src="img/shoe-4.png" alt="" class="w-75">
+
+                </div>
+                <p class="fw-bold"><span><i class="ri-star-fill text-warning"> </i><i class="ri-star-fill text-warning">
+                        </i><i class="ri-star-fill text-warning"> </i><i class="ri-star-fill text-warning"> </i><i
+                            class="ri-star-fill text-warning"> </i> (3,658)</span> <br>
+
+                </p>
+                <div class="item-title fw-bold"> Nike Winflo 10</div>
+                <div class="d-flex gap-4">
+                    <h4 class="fw-bold">$69.50</h4>
+                    <button class="py-0 px-2 border-0 blue text-white add-cart">Add to cart</button>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+
+    <section class="container-xxl pt-5" id="about">
+
+
+        <div class="row row-cols-1 row-cols-md-2 pt-5">
+            <div class="col start-0  d-flex justify-content-center">
+                <div class="box position-relative">
+
+
+
+                </div>
+                <img src="img/about-image.png" alt="" class="position-absolute img-fluid">
+
+
+
+            </div>
+
+            <div class="col position-relative p-3  font-micro">
+                <h5 class="text-danger">About us</h5>
+                <h1 class="fw-bold">We Provide <span class="text-danger">High</span> <br> Quality Shoes</h1>
+                <br>
+                <p>Nike is, without a doubt, the greatest and most dependable shoe brand in the world. Nike is
+                    well-known for its high-quality products and innovative designs. Blue Ribbon Sports was the original
+                    name of Nike when it was founded in 1964. Bill Bowerman founded it. It got Nike's name in 1978, but
+                    it was not announced publicly for 2 years. For decades, Nike has been unbeatable and has stood out
+                    in terms of shoe quality. Nike is considered one of the most successful shoe manufacturers. It
+                    started off making sports shoes, but now they have the greatest collection of stylish shoes.</p>
+                <br>
+                <p> Nike provides its clients with some of the top services available</p>
+
+                <button class="btn rounded-0 py-2 text-white fw-bold">Explore Now <i
+                        class="ri-arrow-right-circle-fill"></i></button>
+            </div>
+        </div>
+    </section>
+
+
+    <br>
+    <br>
+    <br>
+    <div class="container-xxl font-micro pt-5" id="testmonial">
+        <div class="row row-cols-1 row-cols-md-2 d-flex gap-2 gap-md-0 justify-content-between">
+            <div class="col p-4">
+                <span>Lorem, ipsum.</span>
+                <h1 class=" fw-bold">Get to know Our <br> Feature <span class="text-danger"> Product</span></h1>
+                <p>
+                    Welcome to Nike summer shoes for Men collection that is chic, breathable and versatile. We have
+                    a pair for you to match every outfit, be it your sundresses, ethnic suits, or breathtaking sarees..
+                    Whether you are running errands or heading out for a pool party.
+                </p>
+
+                <div class="d-sm-flex align-items-center d-none d-sm-block">
+                    <div class="p-3 mx-2  mx-md-4">
+                        <img src="img/design-thinking_2857527.png" alt="" class="img-fluid">
+                    </div>
+                    <div>
+                        <h5 class="fw-bold">Lorem ipsum dolor sit amet.</h6>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit, maxime.</p>
+                    </div>
+                </div>
+                <br>
+                <div class="d-sm-flex d-none d-sm-block">
+                    <div class="p-3 mx-2  mx-md-4">
+                        <img src="img/creativity_1703879.png" alt="" class="img-fluid">
+                    </div>
+                    <div>
+                        <h5 class="fw-bold">Lorem ipsum dolor sit amet.</h6>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit, maxime.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col d-flex align-items-center justify-content-center">
+                <div class="w-75 h-auto d-flex flex-column align-items-center product-color">
+                    <img src="img/shoe-box.png" alt="" class="img-fluid">
+                    <div class="w-100 p-2">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="w-100 p-2 d-flex justify-content-between align-items-start">
+                        <h5>10:15:05</h5>
+                        <span class=" fw-bold bg-gradient rounded-circle"><i
+                                class="ri-shopping-bag-line p-2"></i></span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <br>
+
+
+
+    <section class="container-xxl">
+        <div class="row row-cols-1 row-cols-md-2">
+            <div class="col">
+                <h2 class="fw-bold">
+                    Sign Up for <span class="text-danger">Updates</span> <br> & Newsletter
+
+                </h2>
+            </div>
+            <div class="col d-flex align-items-center">
+                <div class=" d-flex w-100">
+                    <input type="text" placeholder="Enter Query" class="w-75 p-2 product-color text-white border-0">
+                    <button class="px-2 w-25 bg-success border-0 btn rounded-0 text-white fw-bold">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <br>
+    <br>
+    <br>
+
+    <footer class="container-xxl border border-end-0 border-start-0 py-4" id="footer">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 ">
+            <div class="col">
+                <ul>
+                    <li class="fw-bold fs-3 text-danger">Store Information</li>
+                    <li class="py-1"><i class="ri-map-pin-line"></i> Hunuman Mandir,BMW showroom opposite, Nagpur-440002
+                    </li>
+                    <li class="py-1"><i class="ri-phone-fill"></i> 958555685</li>
+                    <li class="py-1"><i class="ri-mail-fill"></i> info@nikeshoe.com</li>
+                    <li class="py-1"><i class="ri-facebook-circle-fill fs-2 text-primary"></i> <i
+                            class="ri-instagram-fill fs-2 text-danger"></i> <i
+                            class="ri-twitter-fill fs-2 text-info"></i></li>
+                </ul>
+
+
+
+            </div>
+            <div class="col">
+                <ul>
+                    <li class="fw-bold fs-3 text-danger">Information</li>
+                    <li>Delivery</li>
+                    <li>About Us</li>
+                    <li>Price Drop</li>
+                    <li>Stores</li>
+                </ul>
+            </div>
+            <div class="col">
+                <ul>
+                    <li class="fw-bold fs-3 text-danger">Categories</li>
+                    <li>Men</li>
+                    <li>Athletic</li>
+                    <li>Women</li>
+                    <li>Boys</li>
+                    <li>Girls</li>
+                </ul>
+            </div>
+            <div class="col">
+                <ul>
+                    <li class="fw-bold fs-3 text-danger">Your Account</li>
+                    <li>Personal Info</li>
+                    <li>Orders</li>
+                    <li>Credit Slips</li>
+                    <li>Address</li>
+                </ul>
+            </div>
+        </div>
+
+
+    </footer>
+
+
+
+
+
+    <script src="main.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</body>
+
+</html>
