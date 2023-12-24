@@ -1,7 +1,7 @@
 
 
 // count down logic starts
-let countDownDate = new Date("Dec 20, 2023 00:00:00").getTime();
+let countDownDate = new Date("Jan 22, 2024 00:00:00").getTime();
 
 let x = setInterval(function () {
     let now = new Date().getTime();
